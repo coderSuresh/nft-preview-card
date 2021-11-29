@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0d192b;
+}
+
+.header-img {
+  position: relative;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 515px;
+  background-color: #14253d;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card .main-image {
+  width: 260px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.card .card-overlay {
+  position: absolute;
+  background-color: #00fff7;
+  text-align: center;
+  cursor: pointer;
+  width: 260px;
+  top: 0;
+  height: 99%;
+  border-radius: 7px;
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bg-card {
+  width: 320px;
+  height: 500px;
+  background-color: #0c1729;
+  position: absolute;
+  border-radius: 10px 10px 30px 30px;
+  margin-top: 90px;
+}
+
+.view-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.overlay {
+  display: none;
+}
+
+.main-image:hover ~ .overlay {
+  display: block;
+}
+
+h2 {
+  margin: 15px 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+h2:hover,
+.span:hover {
+  color: #00fff7;
+}
+
+.desc {
+  color: #8bacda;
+}
+
+.balance-container {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.balance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.eth-icon {
+  width: 15px !important;
+  height: 25px;
+}
+
+.eth-balance {
+  color: #00fff7;
+  margin-left: 10px;
+}
+
+.time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.time img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.days-left {
+  color: #8bacda;
+  font-size: 14px;
+}
+
+.hr {
+  height: 1px;
+  width: 100%;
+  border: 1px solid #2f415b;
+  margin: 20px 0;
+}
+
+.credit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #8bacda;
+  font-size: 14px;
+}
+
+.credit span {
+  color: white;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 35px !important;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50% !important;
+  border: 1px solid white;
+  margin-right: 15px;
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 80%;
+  }
+  .main-image {
+    width: 100% !important;
+  }
+  .bg-card {
+    width: 90%;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 310px) {
+  .credit,
+  .days-left {
+    font-size: 12px;
+  }
+  .eth-balance,
+  .desc {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .card {
+    width: 90%;
+  }
+  .bg-card {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

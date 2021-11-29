@@ -1,0 +1,34 @@
+@media (max-width:360px) {
+    .card {
+        width: 80%;
+    }
+    .main-image {
+        width: 100% !important;
+    }
+    .bg-card {
+        width: 90%;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 310px) {
+    .credit,
+    .days-left {
+        font-size: 12px;
+    }
+    .eth-balance,
+    .desc {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .card {
+        width: 90%;
+    }
+    .bg-card {
+        width: 95%;
+    }
+}

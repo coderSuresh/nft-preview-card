@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+$soft-blue:hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$main-bg: hsl(217, 54%, 11%);
+$card-bg:hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$bg-card:rgb(12, 23, 41);
+
+@mixin flexBox($direction,
+    $justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    @include flexBox(column,
+        center);
+    background-color: $main-bg;
+}
+
+.header-img {
+    position: relative;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 515px;
+    background-color: $card-bg;
+    border-radius: 10px;
+    padding: 20px;
+
+    .main-image {
+        width: 260px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .card-overlay {
+        position: absolute;
+        background-color: $cyan;
+        text-align: center;
+        cursor: pointer;
+        width: 260px;
+        top: 0;
+        height: 99%;
+        border-radius: 7px;
+        z-index: 0;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.bg-card {
+    width: 320px;
+    height: 500px;
+    background-color: $bg-card;
+    position: absolute;
+    border-radius: 10px 10px 30px 30px;
+    margin-top: 90px;
+}
+
+.view-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.overlay {
+    display: none;
+}
+
+.main-image:hover~.overlay {
+    display: block;
+}
+
+h2 {
+    margin: 15px 0;
+    color: $white;
+    font-size: 20px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+h2:hover,
+.span:hover {
+    color: $cyan;
+}
+
+.desc {
+    color: $soft-blue;
+}
+
+.balance-container {
+    margin-top: 20px;
+    @include flexBox(row,
+        space-between)
+}
+
+.balance {
+    @include flexBox(row,
+        center)
+}
+
+.eth-icon {
+    width: 15px !important;
+    height: 25px;
+}
+
+.eth-balance {
+    color: $cyan;
+    margin-left: 10px;
+}
+
+.time {
+    @include flexBox(row,
+        center);
+
+    img {
+        width: 15px;
+        margin-right: 5px;
+    }
+}
+
+.days-left {
+    color: $soft-blue;
+    font-size: 14px;
+}
+
+.hr {
+    height: 1px;
+    width: 100%;
+    border: 1px solid $line;
+    margin: 20px 0;
+}
+
+.credit {
+    @include flexBox(row,
+        flex-start);
+    color: $soft-blue;
+    font-size: 14px;
+
+    span {
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+.avatar {
+    width: 35px !important;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 1px solid $white;
+    margin-right: 15px;
+}
+
+@import './responsive'
